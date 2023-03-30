@@ -6,6 +6,8 @@
  *
  * Return: Always 0.
  */
+char *string_toupper(char *);
+
 int main(void)
 {
 char str[] = "Look up!\n";
