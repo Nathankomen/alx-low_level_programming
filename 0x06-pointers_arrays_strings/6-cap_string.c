@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * cap_string - unction that capitalizes all words of a string
+ * cap_string -  function that capitalizes all words of a string
  * @str: string to be capitalized
  * Return: pointer to changed string
  */
@@ -12,7 +12,8 @@ while (str[i])
 {
 while (!(str[i] >= 'a' && str[i] <= 'z'))
 i++;
-if (i == 0 || str[i - 1] == ' ' || str[i - 1] == '\t' || str[i - 1] == '\n' || str[i - 1] == ',' || str[i - 1] == ';' || str[i - 1] == '.' || str[i - 1] == '!' || str[i - 1] == '?' || str[i - 1] == '\"' || str[i - 1] == '(' || str[i - 1] == ')' || str[i - 1] == '{' || str[i - 1] == '}' || i == 0)
+
+if (i == 0 || str[i - 1] == ' ' || str[i - 1] == '\t' || str[i - 1] == '\n' || str[i - 1] == ',' || str[i - 1] == ';' || str[i - 1] == '.' || str[i - 1] == '!' || str[i - 1] == '?' || str[i - 1] == '*' || str[i - 1] == '(' || str[i - 1] == ')' || str[i - 1] == '{' || str[i - 1] == '}' || i == 0)
 
 str[i] -= 32;
 
