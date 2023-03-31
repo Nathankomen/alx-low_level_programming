@@ -6,6 +6,7 @@
  *
  * Return: Always 0.
  */
+char *infinite_add(char *n1, char *n2, char *r, int size_r);
 int main(void)
 {
 char *n = "1234567892434574367823574575678477685785645685876876774586734734563456453743756756784458";
