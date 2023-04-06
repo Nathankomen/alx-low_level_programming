@@ -6,6 +6,7 @@
  *
  * Return: Always 0.
  */
+int _sqrt_recursion(int n);
 int main(void)
 {
 int r;
