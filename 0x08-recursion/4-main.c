@@ -5,7 +5,8 @@
  * main - check the code
  *
  * Return: Always 0.
- */
+*/
+int _pow_recursion(int x, int y);
 int main(void)
 {
 int r;
