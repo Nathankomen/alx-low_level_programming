@@ -4,8 +4,7 @@ int definite_prime(int n, int z);
 /**
 * is_prime_number - checks if number is prime or not
 * @n: number to check
-* @z: times to iterate
-* Return: 1 if prime,0 otherwise 
+* Return: 1 if prime,0 otherwise
 */
 int is_prime_number(int n)
 {
