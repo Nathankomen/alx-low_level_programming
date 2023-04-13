@@ -28,7 +28,7 @@ for (t = 0; t < lout; t++)
 if (t < l1)
 out[t] = s1[t];
 else
-out[t] = s2[t - ls1];
+out[t] = s2[t - l1];
 out[t] = '\0';
 return (out);
 }
