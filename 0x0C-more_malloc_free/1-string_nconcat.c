@@ -1,34 +1,35 @@
-#include "main.h"
 #include <stdlib.h>
+#include "main.h"
 /**
- * string_nconcat - function that concatenates two strings.
- * @s1: string 1.
- * @s2: string 2.
- * @n: number of bytes.
- * Return: pointer allocated in memory.
+ * *string_nconcat -  concatenates two strings.
+ * @s1: string to append
+ * @s2: string to concatenate
+ * @n: number of bytes
+ * Return: pointer to the result string
  */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-char *out;
-unsigned int l1, l2, lout, t;
-if (s1 == NULL)
-s1 = "";
-if (s2 == NULL)
-s2 = "";
-for (l1 = 0; s1[l1] != '\0'; l1++);
-
-for (l2 = 0; s2[l2] != '\0'; l2++);
-if (n > l2)
-n = l2;
-lout = l1 + n;
-out = malloc(lout + 1);
-if (out == NULL)
-return (NULL);
-for (t = 0; t < lout; t++)
-if (t < l1)
-out[t] = s1[t];
+char *str;
+unsigned int k = 0, m = 0, lenght1 = 0, lenght2 = 0;
+while (s1 && s1[lenght1])
+lenght1++;
+while (s2 && s2[lenght2])
+lenght2++;
+if (n < lenght2)
+str = malloc(sizeof(char) * (lenght1 + n + 1));
 else
-out[t] = s2[t - l1];
-out[t] = '\0';
-return (out);
+str = malloc(sizeof(char) * (lenght1 + lenght2 + 1));
+if (!str)
+return (NULL);
+while (k < lenght1)
+{
+str[k] = s1[k];
+k++;
+}
+while (n < lenght2 && k < (lenght1 + n))
+str[k++] = s2[m++];
+while (n >= lenght2 && k < (lenght1 + lenght2))
+str[k++] = s2[m++];
+str[k] = '\0';
+return (str);
 }
