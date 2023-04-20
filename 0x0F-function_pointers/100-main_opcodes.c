@@ -15,14 +15,14 @@ if (argc != 2)
 printf("Error\n");
 exit(1);
 }
-bytes = atoi(argv[1]);
+byte = atoi(argv[1]);
 if (byte < 0)
 {
 printf("Error\n");
 exit(2);
 }
 arr = (char *)main;
-for (j = 0;  < byte; j++)
+for (j = 0; j < byte; j++)
 {
 if (j == byte - 1)
 {
@@ -30,4 +30,5 @@ printf("%02hhx\n", arr[j]);
 break;
 }
 printf("%02hhx ", arr[j]);
+}
 }
